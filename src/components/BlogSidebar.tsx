@@ -62,7 +62,7 @@ export default function BlogSidebar({ posts }: BlogSidebarProps) {
           </ul>
           
           <button
-            className="md:hidden absolute -right-12 top-1/8 transform -translate-y-1/2 px-3 py-2 text-white bg-red-600 rounded-r-lg shadow-lg hover:bg-blue-800 transition-all duration-300"
+            className="md:hidden absolute -right-12 top-[120px] transform -translate-y-1/2 px-3 py-2 text-white bg-red-600 rounded-r-lg shadow-lg hover:bg-blue-800 transition-all duration-300 z-50"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle sidebar"
           >

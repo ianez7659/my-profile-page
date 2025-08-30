@@ -33,7 +33,7 @@ export default function ProjectCard({
     >
       <Link
         href={`/projects/${slug}`}
-        className="group rounded-2xl shadow-lg p-4 bg-white dark:bg-neutral-900 transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl block relative"
+        className="group rounded-2xl shadow-lg p-4 bg-white text-gray-900 transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl block relative"
       >
         <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
           <Image
@@ -50,13 +50,13 @@ export default function ProjectCard({
         </div>
 
         <h3 className="mt-4 text-xl font-bold text-blue-900">{title}</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-300">{description}</p>
+        <p className="text-sm text-gray-600">{description}</p>
 
         <ul className="flex flex-wrap gap-2 mt-2 text-sm text-red-600 font-medium">
           {techStack.map((tech, idx) => (
             <li
               key={idx}
-              className="bg-red-100 dark:bg-red-900 px-2 py-1 rounded-md"
+              className="bg-red-100 text-red-700 px-2 py-1 rounded-md"
             >
               {tech}
             </li>

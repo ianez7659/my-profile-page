@@ -29,13 +29,37 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter", sans-serif;
-  /* font-family: "Audiowide", cursive; */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* mobile optimization */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* mobile font size */
+  }
+  
+  .prose {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .prose.prose-lg {
+    font-size: 1.125rem;
+  }
+  
+  .prose.prose-xl {
+    font-size: 1.25rem;
+  }
 }
 h2 {
   font-family: "Audiowide", cursive;
