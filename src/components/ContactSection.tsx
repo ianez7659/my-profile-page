@@ -10,9 +10,8 @@ export default function ContactSection() {
           Contacts
           <span className="block mx-auto mt-2 h-[4px] w-10 bg-red-600 rounded transition-all duration-500 group-hover:w-24" />
         </h2>
-        <p className="text-xl text-gray-100 dark:text-gray-300 mb-6">
-          Any project inquiries, job offers, or even just a friendly hello — I’d
-          love to hear from you!
+        <p className="text-xl text-gray-100 mb-6">
+          Feel free to reach out to me for any questions or opportunities!
         </p>
 
         <div className="flex justify-center gap-6  text-2xl mb-6">

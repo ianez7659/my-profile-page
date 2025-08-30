@@ -16,13 +16,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1e1b4b;
-    --foreground: #ededed;
-  }
-}
-
 .prose img {
   @apply rounded-lg shadow;
 }
@@ -61,46 +54,8 @@ body {
     font-size: 1.25rem;
   }
 }
+
 h2 {
   font-family: "Audiowide", cursive;
-}
-/* .prose h1,
-h2,
-h3 {
-  font-size: xx-large;
-} */
-.prose h1 {
-  font-size: 2.25rem;
-  font-weight: 700;
-}
-
-.prose h2 {
-  font-size: 1.875rem;
-  font-weight: 500;
-}
-
-.prose h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-/* normal text size */
-.prose {
-  font-size: 1.25rem; /* normal text size */
-  line-height: 1.35;
-}
-
-/* bigger text */
-.prose.prose-lg {
-  font-size: 1.375rem; /* bigger text */
-}
-
-.prose.prose-xl {
-  font-size: 1.5rem; /* bigger text */
-}
-
-/* smaller text */
-.prose.prose-sm {
-  font-size: 1rem; /* smaller text */
 }
 

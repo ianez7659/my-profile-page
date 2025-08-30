@@ -43,13 +43,13 @@ export default function BlogContent({ posts }: BlogContentProps) {
           filteredPosts.map((post) => (
             <li key={post.slug}>
               <Link href={`/blog/${post.slug}`}>
-                <div className="group bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-xl p-4 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1">
-                  <div className="border border-neutral-400 dark:border-neutral-700 rounded-lg p-4">
-                    <h2 className="text-xl font-bold text-blue-900 dark:text-white group-hover:text-red-500 transition-colors duration-300">
+                <div className="group bg-white border border-neutral-300 rounded-xl p-4 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1">
+                  <div className="border border-neutral-400 rounded-lg p-4">
+                    <h2 className="text-xl font-bold text-blue-900 group-hover:text-red-500 transition-colors duration-300">
                       {post.title}
                     </h2>
 
-                    <p className="text-sm text-blue-800 dark:text-gray-400 mt-1">
+                    <p className="text-sm text-blue-800 mt-1">
                       {new Date(post.date).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "short",
@@ -65,7 +65,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                             (selectedCategory === "Hobby/Interests" && (tag === "Hobby" || tag === "Interests")) ||
                             tag === selectedCategory
                               ? "bg-red-500 text-white" 
-                              : "bg-red-100 text-red-700 dark:bg-neutral-800 dark:text-red-400"
+                              : "bg-red-100 text-red-700"
                           }`}
                         >
                           #{tag}
@@ -73,7 +73,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                       ))}
                     </div>
 
-                    <p className="text-sm text-gray-800 dark:text-gray-300 mt-4 line-clamp-2">
+                    <p className="text-sm text-gray-800 mt-4 line-clamp-2">
                       {post.excerpt}
                     </p>
                   </div>

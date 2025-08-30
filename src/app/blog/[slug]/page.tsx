@@ -25,7 +25,7 @@ export default async function BlogDetailPage({ params }: Props) {
   });
 
   return (
-    <main className="max-w-4xl mx-auto px-4 md:px-6 py-16 dark:prose-invert text-gray-100 bg-[#1e3a8a] rounded-xl">
+    <main className="max-w-4xl mx-auto px-4 md:px-6 py-16 text-gray-100 bg-[#1e3a8a] rounded-xl">
       <Link
         href="/blog"
         className="inline-flex items-center gap-2 text-lg text-white hover:text-blue-300 mb-6"
@@ -41,7 +41,7 @@ export default async function BlogDetailPage({ params }: Props) {
           {post.meta.tags.map((tag: string) => (
             <span
               key={tag}
-              className="inline-block bg-gray-500 dark:bg-neutral-800 text-sm text-gray-100 dark:text-gray-300 px-2 py-1 rounded"
+              className="inline-block bg-gray-500 text-sm text-gray-100 px-2 py-1 rounded"
             >
               #{tag}
             </span>
@@ -49,7 +49,7 @@ export default async function BlogDetailPage({ params }: Props) {
         </div>
       )}
 
-      <article className="prose prose-md dark:prose-invert">{content}</article>
+      <article className="prose prose-md">{content}</article>
     </main>
   );
 }

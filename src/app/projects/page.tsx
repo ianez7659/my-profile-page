@@ -19,31 +19,28 @@ export default function ProjectsPage() {
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="group block rounded-xl overflow-hidden border border-gray-200 dark:border-neutral-800 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all bg-white dark:bg-neutral-900"
+            className="group block rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all bg-white"
           >
-            <div className="relative w-full h-48">
+            <div className="relative w-full aspect-[4/3] overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-
-            <div className="p-5">
-              <h2 className="text-lg font-semibold group-hover:underline text-blue-900 dark:text-white">
+            <div className="p-4">
+              <h2 className="text-lg font-semibold group-hover:underline text-blue-900">
                 {project.title}
               </h2>
-
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 line-clamp-2">
+              <p className="text-sm text-gray-600 mt-2 line-clamp-2">
                 {project.description}
               </p>
-
-              <div className="flex flex-wrap gap-2 mt-4">
-                {project.techStack.map((tech) => (
+              <div className="flex flex-wrap gap-1 mt-3">
+                {project.techStack.slice(0, 3).map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs px-2 py-0.5 rounded bg-gray-100 dark:bg-neutral-700 text-gray-700 dark:text-gray-200"
+                    className="text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-700"
                   >
                     {tech}
                   </span>

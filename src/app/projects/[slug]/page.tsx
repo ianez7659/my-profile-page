@@ -41,7 +41,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         {project.techStack.map((tech) => (
           <span
             key={tech}
-            className="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded"
+            className="text-sm px-3 py-1 bg-blue-100 text-blue-700 rounded"
           >
             {tech}
           </span>
