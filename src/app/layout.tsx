@@ -17,15 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className=" text-white">
+      <body className="text-white">
         <Navbar />
-        <main className=" min-h-screen">
+        <main className="min-h-screen">
           <MotionLayoutWrapper>{children}</MotionLayoutWrapper>
         </main>
         <ScrollToTopButton />

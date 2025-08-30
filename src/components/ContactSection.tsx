@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Github, Linkedin, Instagram } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function ContactSection() {
   return (

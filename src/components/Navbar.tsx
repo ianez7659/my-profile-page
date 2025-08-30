@@ -51,7 +51,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-black text-white shadow-md transition-all duration-300">
       <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center relative">
-        <a href="/#home" className="flex items-center gap-3">
+        <Link href="/#home" className="flex items-center gap-3">
           <Image
             src="/images/Ian-2D.webp"
             alt="Ian Lee"
@@ -69,7 +69,7 @@ export default function Navbar() {
               Passionate web developer
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Mobile toggle button */}
         <button

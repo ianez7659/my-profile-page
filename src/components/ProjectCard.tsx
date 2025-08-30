@@ -10,8 +10,6 @@ interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  github: string;
-  demo: string;
   techStack: string[];
 }
 
@@ -20,8 +18,6 @@ export default function ProjectCard({
   title,
   description,
   image,
-  github,
-  demo,
   techStack,
 }: ProjectCardProps) {
   return (

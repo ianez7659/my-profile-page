@@ -34,7 +34,7 @@ export default function SkillsSection() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {skills.map((group, index) => (
+          {skills.map((group) => (
             <SkillCard
               key={group.category}
               category={group.category}
