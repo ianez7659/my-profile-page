@@ -7,11 +7,12 @@ import MarkdownWrapper from "@/components/MarkDownWrapper";
 import { ArrowLeft } from "lucide-react";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function BlogDetailPage({ params }: Props) {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   if (!post) return notFound();
 

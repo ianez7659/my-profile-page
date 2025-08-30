@@ -15,11 +15,11 @@ export async function generateStaticParams() {
 }
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function ProjectDetailPage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const project: Project | undefined = projects.find((p) => p.slug === slug);
   if (!project) return notFound();
