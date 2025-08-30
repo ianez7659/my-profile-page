@@ -1,0 +1,77 @@
+---
+title: "Callout Components"
+date: "2025-07-19"
+tags: ["Next.js", "MDX", "Projects"]
+excerpt: "This post introduces callout components with examples."
+---
+
+# Brief Introduction of MDX
+
+All blog posts are made with **MDX**. I want to intoroduce some types of callout components we can use in this blog:
+
+<Callout type="tip">
+  ### Type: tip
+
+This is my first callout component with tip. The style is controlled by MDX style commands like "#" and "##".
+
+</Callout>
+<br />
+<Callout type="info">
+  {
+    <>
+      <h3>Type: info</h3>
+      <p className="text-blue-950">
+        This is my 2nd Callout component with info type! This is an example that
+        demonstrates how you can structure paragraphs in a Callout using not
+        only MDX styling, but also by directly using JSX and CSS. .
+      </p>
+    </>
+  }
+  ![Sample](/images/me.jpg)
+  {
+    <>
+      <p className="text-blue-950">
+        Also, as you can see the image, you can even bring images inside of
+        callout component.
+      </p>
+    </>
+  }
+</Callout>
+<br />
+<Callout type="warn">
+  {
+    <>
+      <h3>Type: warn</h3>
+      <p className="text-yellow-950">
+        This is my 3rd Callout component using warn! As you can see, all the
+        types are distinguished by color, so you can freely use the callout type
+        that fits your purpose.
+      </p>
+    </>
+  }
+</Callout>
+<br />
+## More about MDX style layout
+
+- MDX structures using "-"
+- Inserting Custom components
+- Tailwind + prose Style
+- Of course, these features are all made by MDX style commands
+
+<br />
+## Insert Images
+
+Lastly, I want to show an image on the page itself.
+
+![My Blog Post Image](/images/test3.png)
+
+<br />
+
+---
+
+<br />
+That's a wrap on this post! In my next one, I'm excited to share a bit about my interests. 
+Hope to see you there!
+
+<br />
+- Thanks!
