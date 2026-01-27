@@ -18,15 +18,15 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h2 
-            className="text-2xl md:text-4xl font-medium leading-tight mb-4"
+            className="text-red-500 text-2xl md:text-4xl font-medium leading-tight mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           >
-            Hello, My name is
+            Web Developer
             <br />
             <motion.span 
-              className="text-6xl md:text-8xl"
+              className="text-white text-6xl md:text-8xl"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
@@ -34,20 +34,38 @@ export default function HeroSection() {
               Ian Lee,
             </motion.span>
             <br />
-            <motion.span 
-              className="text-red-500 text-2xl md:text-4xl"
+            
+            <motion.span
+            className="text-white text-xl md:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
             >
-              A Passionate{" "}
+              Focused on{" "}
             </motion.span>
-            <motion.span
+            <motion.span 
+              className="text-white text-xl md:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
             >
-              Web Developer
+              modern
+            </motion.span>
+            <motion.span
+            className="text-white text-xl md:text-3xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
+            >
+              , production-ready{" "}
+            </motion.span>
+            <motion.span
+              className="text-xl md:text-3xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+            >
+              web applications
             </motion.span>
           </motion.h2>
         </motion.div>
