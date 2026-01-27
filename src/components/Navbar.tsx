@@ -9,6 +9,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" },
+  { label: "Resume", href: "/IAN_HYUN_KYU_LEE_FRONTEND-DEVELOPER.pdf", isExternal: true },
 ];
 
 export default function Navbar() {
@@ -80,9 +81,20 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-6 text-lg">
           {navItems.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} className="hover:text-[#ffdd40]">
-                {item.label}
-              </Link>
+              {item.isExternal ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#ffdd40]"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link href={item.href} className="hover:text-[#ffdd40]">
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -98,13 +110,25 @@ export default function Navbar() {
         <ul className="bg-black/70 px-4 py-4 flex flex-col text-center text-xl gap-4">
           {navItems.map((item) => (
             <li key={item.href}>
-              <Link
-                href={item.href}
-                onClick={() => setMenuOpen(false)} // Close when cliked
-                className="hover:text-[#ffdd40]"
-              >
-                {item.label}
-              </Link>
+              {item.isExternal ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-[#ffdd40]"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)} // Close when cliked
+                  className="hover:text-[#ffdd40]"
+                >
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

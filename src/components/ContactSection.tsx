@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Download } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -41,6 +41,17 @@ export default function ContactSection() {
             <Linkedin size={28} className="hover:text-red-500" />
           </a>
         </div>
+
+        <a
+          href="/IAN_HYUN_KYU_LEE_FRONTEND-DEVELOPER.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 mt-8 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-300 font-medium"
+          aria-label="Download Resume"
+        >
+          <Download size={20} />
+          Download Resume
+        </a>
 
       </div>
     </section>
