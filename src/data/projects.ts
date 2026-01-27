@@ -350,7 +350,7 @@ The application streamlines steel wall delivery workflows by coordinating admini
     description:
       "An interactive web experience showcasing GSAP animations with Astro framework, featuring dynamic timeline animations and engaging visual storytelling.",
     image: "/images/inid02.webp",
-    github: "https://github.com/ianez7659/tezukuri-van",
+    github: "https://github.com/ianez7659/astro-and-express-with-gsap-initial-d",
     demo: "https://astro-and-express-with-gsap-initial.vercel.app/",
     techStack: [
       "Astro",
