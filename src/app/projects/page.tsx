@@ -21,12 +21,12 @@ export default function ProjectsPage() {
             href={`/projects/${project.slug}`}
             className="group block rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all bg-white"
           >
-            <div className="relative w-full aspect-[4/3] overflow-hidden">
+            <div className="relative w-full aspect-video overflow-hidden bg-gray-100">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="p-4">
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-1 mt-3">
-                {project.techStack.slice(0, 3).map((tech) => (
+                {project.techStack.map((tech) => (
                   <span
                     key={tech}
                     className="text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-700"

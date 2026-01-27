@@ -33,7 +33,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         <ArrowLeft size={16} />
         Back to Projects
       </Link>
-      <h2 className="text-4xl font-medium mb-6 text-center text-white">
+      <h2 className="text-3xl md:text-4xl font-medium mb-6 text-center text-white">
         {project.title}
       </h2>
 

@@ -30,7 +30,7 @@ export default function ProjectsSection() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {projects.map((project, idx) => (
+          {projects.slice(0, 3).map((project, idx) => (
             <ProjectCard key={idx} {...project} />
           ))}
         </motion.div>

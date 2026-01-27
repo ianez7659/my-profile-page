@@ -2,12 +2,12 @@ export const skills = [
   {
     category: "Languages",
     icon: "Code2",
-    skills: ["JavaScript", "TypeScript", "C", "C++", "C#", "Python", "Java"],
+    skills: ["JavaScript", "TypeScript", "C", "C++", "C#"],
   },
   {
-    category: "Frameworks",
+    category: "Frameworks & Libraries",
     icon: "Cpu",
-    skills: ["React", "Next.js", "Astro"],
+    skills: ["React", "Next.js", "Astro", "Tailwind CSS", "Shadcn/UI", "GSAP", "Framer Motion"],
   },
   {
     category: "Backend",

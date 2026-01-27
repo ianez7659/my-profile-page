@@ -6,12 +6,9 @@ import { useRef, useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "/#home" },
-  { label: "About", href: "/#about" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Blog", href: "/#blog" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
@@ -51,7 +48,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-black text-white shadow-md transition-all duration-300">
       <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center relative">
-        <Link href="/#home" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/Ian-2D.webp"
             alt="Ian Lee"
@@ -66,7 +63,7 @@ export default function Navbar() {
                 isScrolled ? "max-h-6 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              Passionate web developer
+              Front-end focused web developer
             </span>
           </div>
         </Link>

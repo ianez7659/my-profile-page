@@ -12,21 +12,31 @@ export default function HeroSection() {
           Welcome to my portfolio website.
         </h2>
         <div className="flex items-start gap-4 mt-6 max-w-4xl">
+          <div className="text-lg md:text-xl leading-relaxed">
+            <Image
+              src="/images/Ian-2D.webp"
+              alt="Ian Lee"
+              width={100}
+              height={100}
+              className="rounded-full float-left mr-4 mb-2"
+            />
+            <p className="mb-4">
+              Web developer focused on building production-ready web applications,
+              with strong experience in front-end development and hands-on experience
+              across backend features such as authentication, APIs, and databases.
+            </p>
 
-          <p className="text-lg md:text-xl leading-relaxed">
-          <Image
-            src="/images/Ian-2D.webp"
-            alt="Ian Lee"
-            width={100}
-            height={100}
-            className="rounded-full float-left mr-4 mb-2"
-          />
-            My name is Ian Hyun Kyu Lee from Seoul, Korea. I&apos;m a enthusiastic web
-            developer who always hope to change the net world in the future. If
-            you want to know more about me, please do not hegitate to press the
-            button below. I&apos;m always looking for new opportunities to grow and
-            learn. I&apos;m also open to collaboration and new projects. If you want to see my projects and technical blogs, please press the buttons below. 
-          </p>
+            <p className="mb-4">
+              I&apos;ve worked on real client and personal projects across the full development
+              lifecycle — from designing responsive UIs and interactive experiences
+              to implementing authentication, admin dashboards, and deployment.
+            </p>
+
+            <p>
+              My background in game programming shapes how I approach UI development,
+              with particular attention to interaction, performance, and usability.
+            </p>
+          </div>
         </div>
         <ChevronDown size={48} className="text-red-600 animate-bounce mt-6" />
         <div className="flex flex-row sm:flex-row gap-4 mt-8">
