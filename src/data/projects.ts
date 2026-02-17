@@ -1,6 +1,97 @@
 import type { Project } from "@/types/project";
 
-export const projects: Project[] = [  
+export const projects: Project[] = [
+  {
+    slug: "ai-ticket-dashboard",
+    title: "AI Ticket Dashboard - Customer Support Center",
+    description:
+      "AI-powered customer support ticket management system with admin dashboard, featuring ticket submission, AI-assisted responses, and real-time ticket tracking.",
+    image: "/images/ai-ticket-landing.png",
+    github: "https://github.com/ianez7659/ai-ticket-dashboard",
+    demo: "https://ai-ticket-dashboard.vercel.app/",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "OpenAI",
+      "Tailwind CSS",
+      "Railway",
+    ],
+    sections: [
+      {
+        type: "text" as const,
+        title: "Project Description",
+        content:
+          `AI Ticket Dashboard is a customer support management platform that leverages AI assistance to streamline ticket submission and response workflows.
+
+          The project focuses on providing an intuitive interface for customers to submit support tickets while giving administrators powerful tools to manage and respond to tickets efficiently.
+
+          Key features include AI-powered response suggestions, real-time ticket tracking, role-based access control with admin dashboard, and a responsive user interface.
+
+          Built with Next.js and TypeScript, the application provides a modern solution for customer support operations, demonstrating full-stack development capabilities with AI integration.
+
+          The project is deployed and accessible as a live demo, showcasing production-ready architecture for customer support management.
+          `,
+      },
+      {
+        type: "image" as const,
+        image: [
+          "/images/ai-ticket-landing.png",
+          "/images/ai-ticket-dash.png", 
+          "/images/ai-ticket-railway1.png",
+        ],
+      },
+      {
+        type: "textImage" as const,
+        title: "Key Features",
+        content:
+          `• Customer ticket submission with detailed form
+
+            • AI-assisted response generation for administrators
+
+            • Admin dashboard for ticket management and tracking
+
+            • Role-based access control (customer and admin views)
+
+            • Real-time ticket status updates
+
+            • Responsive UI optimized for desktop and mobile`,
+        image: ["/images/ai-ticket-landing.png","/images/ai-ticket-dash.png","/images/ai-ticket-detail.png","/images/ai-ticket-railway2.png", "/images/ai-ticket-railway3.png"],
+        align: "right",
+      },
+      {
+        type: "textImage" as const,
+        title: "Technical Highlights",
+        content:
+          `• Built with Next.js (App Router) and TypeScript for scalable front-end architecture
+
+            • Backend API built with Python and FastAPI for AI-powered ticket processing
+
+            • Integrated OpenAI API for intelligent response generation
+
+            • Role-based authentication and access control
+
+            • Responsive design with Tailwind CSS
+
+            • Backend deployed on Railway, frontend on Vercel`,
+        image: ["/images/stack01.jpg"],
+        align: "left",
+      },
+      {
+        type: "text" as const,
+        title: "Result",
+        content: `• Fully deployed customer support management system
+
+                  • AI-powered assistance for efficient ticket handling
+
+                  • Production-ready admin dashboard
+
+                  • Responsive, user-friendly interface across devices`,
+      },
+    ],
+  },
+  
   {
     slug: "Jobflow",
     title: "Jobflow - Job Tracker",
