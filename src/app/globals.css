@@ -101,6 +101,12 @@ h2 {
   @apply rounded-lg shadow;
 }
 
+.prose hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
 /* normal text size */
 .prose {
   font-size: 1.25rem; /* normal text size */
