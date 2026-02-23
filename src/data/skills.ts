@@ -1,13 +1,67 @@
+// export const skills = [
+//   {
+//     category: "Languages",
+//     icon: "Code2",
+//     skills: ["JavaScript", "TypeScript", "C", "C++", "C#"],
+//   },
+//   {
+//     category: "Frameworks & Libraries",
+//     icon: "Cpu",
+//     skills: ["React", "Next.js", "Astro", "Tailwind CSS", "Shadcn/UI", "GSAP", "Framer Motion"],
+//   },
+//   {
+//     category: "Backend",
+//     icon: "Server",
+//     skills: [
+//       "Node.js",
+//       "Express",
+//       "JWT",
+//       "Google OAuth",
+//       "Prisma",
+//       "NextAuth.js",
+//     ],
+//   },
+//   {
+//     category: "APIs & Tools",
+//     icon: "PlugZap",
+//     skills: ["REST", "GraphQL", "Postman"],
+//   },
+//   {
+//     category: "Databases",
+//     icon: "Database",
+//     skills: ["MySQL", "MongoDB", "PostgreSQL", "Supabase"],
+//   },
+//   {
+//     category: "Dev Tools",
+//     icon: "Wrench",
+//     skills: [
+//       "Git",
+//       "GitHub",
+//       "Vercel",
+//       "Render",
+//       "VS Code",
+//       "Figma",
+//       "Canva",
+//       "Photoshop",
+//     ],
+//   },
+// ];
+
 export const skills = [
   {
-    category: "Languages",
+    category: "Frontend",
     icon: "Code2",
-    skills: ["JavaScript", "TypeScript", "C", "C++", "C#"],
-  },
-  {
-    category: "Frameworks & Libraries",
-    icon: "Cpu",
-    skills: ["React", "Next.js", "Astro", "Tailwind CSS", "Shadcn/UI", "GSAP", "Framer Motion"],
+    skills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Zustand",
+      "GSAP",
+      "Framer Motion",
+      "Shadcn/UI",
+    ],
   },
   {
     category: "Backend",
@@ -15,34 +69,31 @@ export const skills = [
     skills: [
       "Node.js",
       "Express",
-      "JWT",
-      "Google OAuth",
-      "Prisma",
+      "FastAPI",
+      "REST APIs",
+      "JWT Authentication",
       "NextAuth.js",
+      "Prisma"
     ],
   },
   {
-    category: "APIs & Tools",
-    icon: "PlugZap",
-    skills: ["REST", "GraphQL", "Postman"],
-  },
-  {
-    category: "Databases",
+    category: "Database",
     icon: "Database",
-    skills: ["MySQL", "MongoDB", "PostgreSQL", "Supabase"],
+    skills: [
+      "PostgreSQL",
+      "MongoDB",
+      "Supabase"
+    ],
   },
   {
-    category: "Dev Tools",
+    category: "Deployment & Tools",
     icon: "Wrench",
     skills: [
       "Git",
       "GitHub",
       "Vercel",
       "Render",
-      "VS Code",
-      "Figma",
-      "Canva",
-      "Photoshop",
+      "Postman"
     ],
   },
 ];
