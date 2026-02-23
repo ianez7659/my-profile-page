@@ -1,47 +1,48 @@
 ---
-title: "New Project: AI-Ticket-Management"
-date: "2026-01-24"
-tags: ["Next.js", "Python", "FastAPI", "Projects", "AI", "OpenAI"]
-excerpt: "AI Management"
+title: "New Project: I's-Ai-Support — AI-Powered Ticket Management"
+date: "2026-02-17"
+tags: ["Next.js", "Python", "FastAPI", "Projects", "AI", "OpenAI", "PostgreSQL", "Railway", "Vercel"]
+excerpt: "Full-stack AI ticket management system with FastAPI and OpenAI integration."
 ---
 
-## AI powered web application using FastAPI
+## Introducing an AI-Powered Support Project
 
-Besides focusing on web developement, I have personally used python for a while and I found it
+I’d like to introduce a project I finished in January 2026: **I's-Ai-Support**, a full-stack ticket management system that uses AI to help handle support requests.
+
+I’ve been focusing on front-end and full-stack web development for a while, and I’ve also used Python and FastAPI on the side. What I wanted to try this time was to plug a real AI model into a practical workflow—something that could actually help with summarization and reply drafting—instead of leaving it as a separate experiment.
 
 ---
-
 
 <Callout type="info">
-  ### Cinematic Page Choreography with GSAP
+  ### <span className="text-red-700">From Full-Stack to AI-Assisted Support</span>
 
-  In particular, GSAP really shines when it comes to stitching multiple elements together like cinematic cuts, or revealing text and logos sequentially with a strong sense of rhythm. It has a kind of tactile, hands-on feel that sets it apart from other animation libraries.
+  The idea was straightforward: a place where users can submit tickets, and where admins get AI help to summarize and respond. I integrated **OpenAI GPT-4o-mini** so that each ticket can be summarized automatically and reply suggestions can be generated. That way, support handling becomes faster without losing context.
 
-  ### From Concept to Experiment
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+    <img src="/images/ai-ticket-ai1.png" alt="AI ticket sample 1" className="w-full rounded-lg" />
+    <img src="/images/ai-ticket-ai2.png" alt="AI ticket sample 2" className="w-full rounded-lg" />
+  </div>
 
-  This project started from a desire to directly explore and implement those strengths of GSAP. I began working on it with the idea: "What if a famous animation and game series like Initial D were reimagined as a web-based game with this kind of visual style?"
+  The backend is a modular **FastAPI** app with **PostgreSQL** for storage, and the frontend is a Next.js app that talks to it over a REST API. I kept the API and UI clearly separated so that the system stays maintainable as it grows.
 
-  From a technical standpoint, the project uses a somewhat unconventional combination—GSAP at the core, along with TypeScript, Astro, and Express. Despite being experimental, it turned out to be an especially enjoyable experience for me.
 
-  <video autoPlay loop muted playsInline width="100%" className="rounded-lg my-4">
-    <source src="/images/inid-vid1.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  ### <span className="text-red-700">What’s in Place Today</span>
 
-  (Animation sample)
+  On the product side, there’s an authenticated workflow with status management, search, and archive—so agents can track and filter tickets in one place. The frontend is deployed on **Vercel** and the backend on **Railway**, so the whole thing is live and usable.
+    ![Railway Sample](/images/ai-ticket-railway1.png)
+
+  **Try it:** [AI-Powered Customer Support Center](https://ai-ticket-dashboard.vercel.app/) — submit a ticket and try the AI-assisted flow. To explore the admin dashboard, use the demo login with password: `admin123`.
 
 </Callout>
-
 
 ---
 
 ## What This Project Represents
 
-In the end, I believe this project best demonstrates both the fun and the expressive potential of page animations built with GSAP.
+For me, this project is about bringing an AI model into a real application—not just a demo, but something that could support real ticket handling. At its current stage, it covers the core loop: submit ticket, summarize with AI, suggest replies, and manage status and history.
 
-At its current stage, the project implements only the core features, such as a simple dashboard after login, a profile page, and basic messaging functionality.
-Moving forward, I plan to expand this project into a space similar to an online game lobby—where users can naturally gather, wait, and interact with one another in real time.
+Going forward, I’d like to refine the AI prompts, add more filters and analytics for admins, and keep the stack simple so it’s easy to extend or reuse in other support-style tools.
 
-![Sample](/images/inid02.webp)
+If you’d like to try it, the demo is linked above—and if you have feedback or ideas, I’d be glad to hear them. Thanks for reading.
 
 ---
