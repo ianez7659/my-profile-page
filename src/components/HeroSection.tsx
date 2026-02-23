@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ResumeButton from "@/components/ResumeButton";
 
 export default function HeroSection() {
   return (
@@ -68,6 +69,14 @@ export default function HeroSection() {
               web applications
             </motion.span>
           </motion.h2>
+          <ResumeButton
+            className="mt-6"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.4, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          />
         </motion.div>
 
         {/* Right: Image */}
