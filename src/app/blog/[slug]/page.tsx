@@ -22,6 +22,9 @@ export default async function BlogDetailPage({ params }: Props) {
       Callout,
       MarkdownWrapper,
     },
+    options: {
+      parseFrontmatter: false,
+    },
   });
 
   return (
