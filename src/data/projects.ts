@@ -279,7 +279,7 @@ export const projects: Project[] = [
       "A fully commissioned marketing website built for a real client, featuring a custom admin dashboard, real-time content management via Supabase, and a sleek, responsive design.",
     image: "/images/tezukuri-1.png",
     github: "https://github.com/ianez7659/tezukuri-van",
-    demo: "https://tezukuri-van.vercel.app/",
+    demo: "https://www.tezukurivan.ca/",
     techStack: [
       "Next.js",
       "Typescript",
@@ -351,7 +351,7 @@ export const projects: Project[] = [
 
   {
     slug: "ManageSmartr",
-    title: "ManageSmartr - Steel Wall Delivery Management System",
+    title: "ManageSmartr - Real Client Steel Wall Delivery Management System",
     description:
       "A platform that streamlines steel wall delivery operations by centralizing orders, tracking, and team communication.",
     image: "/images/manage-smart01.png",
@@ -517,12 +517,12 @@ The application streamlines steel wall delivery workflows by coordinating admini
 
   {
     slug: "Nicte-snacks",
-    title: "NICTE — Alegria Bites Website",
+    title: "NICTE — Real Client Alegria Bites Website",
     description:
       "Marketing website built with Next.js, featuring responsive design, SEO optimization, and Lighthouse 100+ performance scores.",
     image: "/images/nicte-2.png",
     github: "https://github.com/ianez7659/nicte-snack",
-    demo: "https://nicte-snack-pmgt.vercel.app/",
+    demo: "https://www.nictesnacks.ca/",
     techStack: [
       "Next.js",
       "Typescript",
