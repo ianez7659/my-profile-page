@@ -595,7 +595,7 @@ The application streamlines steel wall delivery workflows by coordinating admini
         content:
           `• Lighthouse scores:
 100 / 96 / 100 / 100 (Desktop)
-84 / 96 / 100 / 100 (Mobile)
+97 / 96 / 100 / 100 (Mobile)
 
 • Fully deployed live client website
 
