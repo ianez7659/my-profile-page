@@ -128,44 +128,49 @@ export const projects: Project[] = [
       {
         type: "image" as const,
         image: [
-          "/images/jobflow-5.png",
-          "/images/jobflow-2.png",
-          "/images/jobflow-7.png",
+          "/images/jobflow-1.png",
+          "/images/jobflow-1d.png",
+          "/images/jobflow-22.png",
+          "/images/jobflow-22d.png",
+          "/images/jobflow-3.png",
+          "/images/jobflow-3d.png",
         ],
       },
       {
         type: "textImage" as const,
         title: "Key Features",
         content:
-          `• Dashboard with real-time job application statistics and charts
+          `• Job management — Add / edit / delete applications; pipeline Applying → Applied → Interview 1/2/3 → Offer / Rejected; company, role level, tags, job URL, and applied date
 
-            • Status-based job tracking (Resume → Interview → Offer / Rejected)
+            • Apply flow — Resume PDF upload and optional ATS-style match against the job description
 
-            • Job application management with search and filtering
+            • Job detail — AI stage advice (automatic) and on-demand interview questions based on the JD
 
-            • Automatic information extraction from job posting URLs
+            • Soft delete with restore and archive
 
-            • Authentication with GitHub OAuth and email/password login
+            • Dashboard & analytics — Real-time status overview (Waiting / Decided / Interviews), interview progress, offer vs rejected charts, search and filters
 
-            • Responsive UI optimized for desktop and mobile`,
-        image: ["/images/jobflow-2.png", "/images/jobflow-6.png"],
+            • Auth & profile — NextAuth with GitHub, Google OAuth, and credentials; first-time category selection; protected routes
+
+            • Responsive UI — Mobile-first layout and optimized desktop navigation`,
+        image: ["/images/jobflow-4.png", "/images/jobflow-4d.png"],
         align: "right",
       },
       {
         type: "textImage" as const,
         title: "Technical Highlights",
         content:
-          `• Built with Next.js (App Router) and TypeScript for scalable architecture
+          `• Next.js 15 (App Router) + TypeScript + Tailwind CSS; REST-style route handlers for API logic
 
-            • Used Prisma + PostgreSQL for structured data management
+            • Prisma ORM + PostgreSQL on Render; deployed on Vercel with a production-ready stack
 
-            • Implemented authentication with NextAuth.js
+            • NextAuth.js — GitHub, Google OAuth, and email/password credentials
 
-            • Applied Chart.js / Recharts for data visualization
+            • OpenAI API for JD-based assist (stage advice, match) and related flows; Vercel Blob where needed
 
-            • Managed client state using Zustand
+            • Recharts for analytics; react-markdown + remark-gfm for rendered content
 
-            • Enhanced UI interaction with Framer Motion`,
+            • Client state with Zustand; UI motion with Framer Motion`,
         image: ["/images/stack02.jpg"],
         align: "left",
       },
