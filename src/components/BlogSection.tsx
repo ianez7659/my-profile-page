@@ -1,27 +1,17 @@
-// "use client";
-
 import Link from "next/link";
 import { getAllPosts, PostMeta } from "@/lib/blog";
 import Button from "@/components/Button";
+import LandingSection from "@/components/LandingSection";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function BlogSection() {
   const posts: PostMeta[] = getAllPosts()
     .sort((a, b) => (a.date < b.date ? 1 : -1))
     .slice(0, 2);
   return (
-    <section
-      id="blog"
-      className="py-16 mx-4 rounded-xl bg-[#1e3a8a] scroll-mt-16"
-    >
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex justify-center">
-          <div className=" w-full group px-4 py-2 my-6 rounded transition-colors duration-300 text-white hover:bg-[#1e3a8a] hover:text-white text-center">
-            <h2 className="text-3xl md:text-4xl font-medium font-audiowide">
-              Blog
-            </h2>
-            <span className="block mx-auto mt-2 h-[4px] w-10 bg-red-500 rounded transition-all duration-500 group-hover:w-24" />
-          </div>
-        </div>
+    <LandingSection id="blog" variant="cardBlue">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeading>Blog</SectionHeading>
 
         <div className="space-y-6">
           {posts.map((post) => (
@@ -62,7 +52,6 @@ export default function BlogSection() {
         </div>
 
         <div className="text-center mt-10">
-
           <Button
             href="/blog"
             variant="outline"
@@ -72,6 +61,6 @@ export default function BlogSection() {
           </Button>
         </div>
       </div>
-    </section>
+    </LandingSection>
   );
 }

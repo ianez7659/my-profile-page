@@ -2,15 +2,14 @@
 
 import { Mail, Github, Linkedin } from "lucide-react";
 import ResumeButton from "@/components/ResumeButton";
+import LandingSection from "@/components/LandingSection";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-16 scroll-mt-16 text-gray-100">
-      <div className="max-w-3xl mx-auto px-4 text-center">
-        <h2 className="group text-3xl md:text-4xl font-medium mb-12 font-audiowide relative text-center">
-          Contacts
-          <span className="block mx-auto mt-2 h-[4px] w-10 bg-red-600 rounded transition-all duration-500 group-hover:w-24" />
-        </h2>
+    <LandingSection id="contact" variant="plain" className="text-gray-100">
+      <div className="max-w-3xl mx-auto text-center">
+        <SectionHeading>Contacts</SectionHeading>
         <p className="text-xl text-gray-100 mb-6">
           Feel free to reach out to me for any questions or opportunities!
         </p>
@@ -46,6 +45,6 @@ export default function ContactSection() {
         <ResumeButton className="mt-8" />
 
       </div>
-    </section>
+    </LandingSection>
   );
 }

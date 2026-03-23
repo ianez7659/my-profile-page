@@ -4,6 +4,8 @@ import React from "react";
 import SkillCard from "./SkillCard";
 import { skills } from "@/data/skills";
 import { motion } from "framer-motion";
+import LandingSection from "./LandingSection";
+import SectionHeading from "./SectionHeading";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -17,17 +19,13 @@ const containerVariants = {
 
 export default function SkillsSection() {
   return (
-    <section
-      id="skills"
-      className="scroll-mt-20 mx-4 rounded-xl py-20 px-4 bg-[#1e3a8a] text-gray-100"
-    >
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="group text-3xl md:text-4xl font-medium mb-12 font-audiowide relative text-center">
+    <LandingSection id="skills" variant="cardBlue">
+      <div className="text-center">
+        <SectionHeading underlineHoverClass="group-hover:w-36">
           Technical Stacks
-          <span className="block mx-auto mt-2 h-[3px] w-10 bg-red-500 rounded transition-all duration-500 group-hover:w-36" />
-        </h2>
+        </SectionHeading>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -44,6 +42,6 @@ export default function SkillsSection() {
           ))}
         </motion.div>
       </div>
-    </section>
+    </LandingSection>
   );
 }

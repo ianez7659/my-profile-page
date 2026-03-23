@@ -94,10 +94,10 @@ export const projects: Project[] = [
   
   {
     slug: "Jobflow",
-    title: "Jobflow - Job Tracker",
+    title: "Jobflow - AI Assisted Job Tracker",
     description:
-      "Job application tracking dashboard built with Next.js and PostgreSQL, featuring real-time analytics, authentication, and responsive UI.",
-    image: "/images/jobflow-2.png",
+      "AI Assisted Job application tracking dashboard built with Next.js and PostgreSQL, featuring real-time analytics, authentication, and responsive UI.",
+    image: "/images/jobflow-3.png",
     github: "https://github.com/ianez7659/job-tracker",
     demo: "https://job-tracker-wheat.vercel.app/",
     techStack: [
@@ -108,6 +108,7 @@ export const projects: Project[] = [
       "Render",
       "Tailwind CSS",
       "Framer Motion",
+      "OpenAI",
     ],
     sections: [
       {

@@ -3,15 +3,20 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import Button from "./Button";
+import LandingSection from "./LandingSection";
+import SectionHeading from "./SectionHeading";
 
-export default function HeroSection() {
+export default function AboutSection() {
   return (
-    <section id="about" className="scroll-mt-20 py-16 px-4 text-white">
+    <LandingSection id="about" variant="plain">
       <div className="flex flex-col items-center">
-        <h2 className="text-3xl md:text-4xl text-center">
+        <SectionHeading underlineHoverClass="group-hover:w-36">
+          About
+        </SectionHeading>
+        <p className="text-xl md:text-2xl text-center mb-8 max-w-3xl">
           Welcome to my portfolio website.
-        </h2>
-        <div className="flex items-start gap-4 mt-6 max-w-4xl">
+        </p>
+        <div className="flex items-start gap-4 mt-2 max-w-4xl w-full">
           <div className="text-lg md:text-xl leading-relaxed">
             <Image
               src="/images/Ian-2D.webp"
@@ -48,6 +53,6 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
-    </section>
+    </LandingSection>
   );
 }
