@@ -32,7 +32,7 @@ export default function ContactSection() {
             <Github size={28} className="hover:text-red-500" />
           </a>
           <a
-            href="https://linkedin.com/in/yourname"
+            href="https://www.linkedin.com/in/ianhklee/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80"
