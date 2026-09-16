@@ -26,7 +26,7 @@ export interface Project {
   description: string;
   image: string;
   github: string;
-  demo: string;
+  demo?: string;
   techStack: string[];
   sections: ProjectSection[];
 }

@@ -55,7 +55,7 @@ export default function BlogSection() {
           <Button
             href="/blog"
             variant="outline"
-            className="hover:bg-[#1e1b4b] hover:border-[##1e1b4b]"
+            className="hover:bg-[#1e1b4b] hover:border-[#1e1b4b]"
           >
             View All Posts
           </Button>

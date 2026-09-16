@@ -4,12 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { RESUME_HREF } from "./ResumeButton";
 
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" },
-  { label: "Resume", href: "/IAN_HYUN_KYU_LEE_FRONTEND-DEVELOPER.pdf", isExternal: true },
+  { label: "Resume", href: RESUME_HREF, isExternal: true },
 ];
 
 export default function Navbar() {

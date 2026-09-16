@@ -102,7 +102,7 @@ export const projects: Project[] = [
     demo: "https://job-tracker-wheat.vercel.app/",
     techStack: [
       "Next.js",
-      "Typescript",
+      "TypeScript",
       "PostgreSQL",
       "Prisma",
       "Render",
@@ -197,7 +197,7 @@ export const projects: Project[] = [
       "Full-stack webtoon platform built with Next.js and Supabase, featuring three viewing modes and GSAP-powered animations with secure PostgreSQL RLS-based data management.",
     image: "/images/playtoon-1.png",
     github: "https://github.com/ianez7659/playtoon",
-    demo: "https://playtoon-six.vercel.app//",
+    demo: "https://playtoon-six.vercel.app/",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -288,7 +288,7 @@ export const projects: Project[] = [
     demo: "https://www.tezukurivan.ca/",
     techStack: [
       "Next.js",
-      "Typescript",
+      "TypeScript",
       "PostgreSQL",
       "Tailwind",
       "Supabase",
@@ -362,7 +362,6 @@ export const projects: Project[] = [
       "A platform that streamlines steel wall delivery operations by centralizing orders, tracking, and team communication.",
     image: "/images/manage-smart01.png",
     github: "https://github.com/Cornerstone-CICCC/final-project-managesmartr-novasoft",
-    demo: "https://playtoon-demo.vercel.app/",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -451,7 +450,7 @@ The application streamlines steel wall delivery workflows by coordinating admini
     demo: "https://astro-and-express-with-gsap-initial.vercel.app/",
     techStack: [
       "Astro",
-      "Typescript",
+      "TypeScript",
       "Express",
       "Tailwind",      
       "GSAP",
@@ -531,7 +530,7 @@ The application streamlines steel wall delivery workflows by coordinating admini
     demo: "https://www.nictesnacks.ca/",
     techStack: [
       "Next.js",
-      "Typescript",
+      "TypeScript",
       "Tailwind CSS",
       "Framer Motion",
       "Swiper",

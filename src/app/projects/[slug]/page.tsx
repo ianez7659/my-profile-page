@@ -49,13 +49,15 @@ export default async function ProjectDetailPage({ params }: Props) {
       </div>
 
       <div className="flex gap-6 mb-12 justify-center">
-        <Button
-          href={project.demo}
-          variant="outline"
-          className="flex gap-2 items-center justify-center text-sm md:text-lg"
-        >
-          <ExternalLink size={20} /> Live Demo
-        </Button>
+        {project.demo && (
+          <Button
+            href={project.demo}
+            variant="outline"
+            className="flex gap-2 items-center justify-center text-sm md:text-lg"
+          >
+            <ExternalLink size={20} /> Live Demo
+          </Button>
+        )}
 
         <Button
           href={project.github}
