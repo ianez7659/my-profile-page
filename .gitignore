@@ -39,3 +39,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local AI harness
+/.claude/
+/skills-lock.json
+/.impeccable/
+/PRODUCT.md
+/DESIGN.md
+/CLAUDE.md
+/AGENT.md
+
+/docs/PRD.md
+/docs/ARCHITECTURE.md
+/docs/ADR.md
+/docs/UI_GUIDE.md
+
+/docs/references/
+/docs/tasks/
