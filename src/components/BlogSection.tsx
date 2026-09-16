@@ -9,7 +9,7 @@ export default function BlogSection() {
     .sort((a, b) => (a.date < b.date ? 1 : -1))
     .slice(0, 2);
   return (
-    <LandingSection id="blog" variant="cardBlue">
+    <LandingSection id="blog" variant="band">
       <div className="max-w-5xl mx-auto">
         <SectionHeading>Blog</SectionHeading>
 

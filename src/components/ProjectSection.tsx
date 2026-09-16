@@ -33,7 +33,11 @@ export default function ProjectsSection() {
         {projects
           .filter((project) => project.featured)
           .map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
+            <ProjectCard
+              key={idx}
+              {...project}
+              className={idx === 0 ? "lg:col-span-2" : ""}
+            />
           ))}
       </motion.div>
       <div className="text-center mt-10">

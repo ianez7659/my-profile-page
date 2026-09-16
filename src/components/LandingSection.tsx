@@ -1,10 +1,8 @@
-"use client";
-
-type Variant = "plain" | "cardBlue";
+type Variant = "plain" | "band";
 
 type Props = {
   id?: string;
-  /** plain: full-width padding only. cardBlue: rounded blue panel with horizontal inset (matches Skills/Blog). */
+  /** plain: sits directly on the ground. band: full-bleed Panel Blue block (Skills/Blog). */
   variant?: Variant;
   children: React.ReactNode;
   className?: string;
@@ -12,6 +10,7 @@ type Props = {
 
 /**
  * Shared vertical rhythm and max-width for landing sections (non-hero).
+ * Both variants span the full viewport width; the inner column controls content width.
  */
 export default function LandingSection({
   id,
@@ -22,8 +21,7 @@ export default function LandingSection({
   const variants: Record<Variant, string> = {
     // text-white: body uses --foreground (dark); plain sections sit on dark bg like Hero
     plain: "py-16 md:py-20 px-4 text-white",
-    cardBlue:
-      "mx-4 md:mx-6 lg:mx-auto my-2 rounded-xl bg-[#1e3a8a] py-16 md:py-20 px-4 text-gray-100 max-w-[min(100%,calc(100vw-2rem))] lg:max-w-7xl",
+    band: "bg-[#1e3a8a] py-16 md:py-20 px-4 text-gray-100",
   };
 
   return (

@@ -139,3 +139,30 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Hero track background. Blue-axis lightness steps only (Two-Axis Rule):
+   the white alpha in the speed lines lightens the blue beneath it, it is not a third hue.
+   The text side stays at Track Indigo so Signal Red clears 3:1 on it. */
+.hero-track {
+  background-color: #1e1b4b;
+  background-image:
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.05) 0 1px,
+      transparent 1px 16px
+    ),
+    radial-gradient(70% 45% at 50% 80%, #1e3a8a 0%, rgba(30, 58, 138, 0) 72%);
+}
+
+@media (min-width: 768px) {
+  /* Desktop puts the portrait on the right, so the spotlight moves with it. */
+  .hero-track {
+    background-image:
+      repeating-linear-gradient(
+        115deg,
+        rgba(255, 255, 255, 0.05) 0 1px,
+        transparent 1px 16px
+      ),
+      radial-gradient(52% 78% at 76% 50%, #1e3a8a 0%, rgba(30, 58, 138, 0) 72%);
+  }
+}

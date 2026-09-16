@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, useScroll } from "framer-motion";
 import { RESUME_HREF } from "./ResumeButton";
 
 const navItems = [
@@ -17,6 +18,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll();
 
   // Handle scroll effect
   useEffect(() => {
@@ -137,6 +139,13 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
+
+      {/* Scroll progress: the 4px section underline motif at page scale. */}
+      <motion.div
+        aria-hidden
+        style={{ scaleX: scrollYProgress }}
+        className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-red-600"
+      />
     </nav>
   );
 }

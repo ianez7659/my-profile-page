@@ -19,7 +19,7 @@ const containerVariants = {
 
 export default function SkillsSection() {
   return (
-    <LandingSection id="skills" variant="cardBlue">
+    <LandingSection id="skills" variant="band">
       <div className="text-center">
         <SectionHeading underlineHoverClass="group-hover:w-36">
           Technical Stacks

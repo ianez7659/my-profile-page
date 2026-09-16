@@ -14,6 +14,7 @@ interface ProjectCardProps {
   techStack: string[];
   github: string;
   demo?: string;
+  className?: string;
 }
 
 export default function ProjectCard({
@@ -24,10 +25,11 @@ export default function ProjectCard({
   techStack,
   github,
   demo,
+  className = "",
 }: ProjectCardProps) {
   return (
     <motion.div
-      className="h-full"
+      className={`h-full ${className}`.trim()}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -47,7 +49,7 @@ export default function ProjectCard({
               src={image}
               alt={title}
               fill
-              className="object-contain transition-transform duration-300 group-hover:scale-105"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
 
             {/* Overlay*/}
