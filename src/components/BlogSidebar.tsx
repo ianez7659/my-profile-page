@@ -37,7 +37,7 @@ export default function BlogSidebar({ posts }: BlogSidebarProps) {
       <aside
         className={`fixed top-0 left-0 h-full w-60 bg-black/70 text-white shadow-xl transition-transform transform z-40 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:relative md:translate-x-0 md:bg-blue-800 md:shadow-none md:h-auto`}
+        } md:relative md:translate-x-0 md:bg-[#1e3a8a] md:shadow-none md:h-auto`}
       >
         <div className="md:p-6 p-4 relative md:pt-6 pt-28 h-full flex flex-col">
           <h2 className="text-2xl font-bold mb-6">Categories</h2>
@@ -62,7 +62,7 @@ export default function BlogSidebar({ posts }: BlogSidebarProps) {
           </ul>
           
           <button
-            className="md:hidden absolute -right-12 top-[120px] transform -translate-y-1/2 px-3 py-2 text-white bg-red-600 rounded-r-lg shadow-lg hover:bg-blue-800 transition-all duration-300 z-50"
+            className="md:hidden absolute -right-12 top-[120px] transform -translate-y-1/2 px-3 py-2 text-white bg-red-600 rounded-r-lg shadow-lg hover:bg-[#1e3a8a] transition-all duration-300 z-50"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle sidebar"
           >

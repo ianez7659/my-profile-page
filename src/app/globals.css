@@ -14,6 +14,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-audiowide: "Audiowide", cursive;
 }
 
 html {
@@ -49,10 +50,6 @@ body {
   .prose.prose-xl {
     font-size: 1.25rem;
   }
-}
-
-h2 {
-  font-family: "Audiowide", cursive;
 }
 
 /* Prose styling */

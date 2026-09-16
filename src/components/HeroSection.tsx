@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="scroll-mt-20 bg-[#1e3a8a] text-gray-200 py-10 px-10"
+      className="scroll-mt-20 bg-[#1e3a8a] text-gray-200 py-16 md:py-20 px-4"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-12">
         {/* Left: Text */}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data/projects";
+import TechChip from "@/components/TechChip";
 
 export const metadata = {
   title: "Projects",
@@ -10,11 +11,11 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-16 text-white">
-      <h1 className="text-3xl md:text-6xl font-bold mb-12 text-center">
+      <h1 className="text-3xl md:text-4xl font-medium font-audiowide mb-12 text-center">
         My Projects
       </h1>
 
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 bg-[#1e3a8a] rounded-xl p-6">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Link
             key={project.slug}
@@ -36,14 +37,9 @@ export default function ProjectsPage() {
               <p className="text-sm text-gray-600 mt-2 line-clamp-2">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-1 mt-3">
+              <div className="flex flex-wrap gap-2 mt-3">
                 {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-700"
-                  >
-                    {tech}
-                  </span>
+                  <TechChip key={tech}>{tech}</TechChip>
                 ))}
               </div>
             </div>

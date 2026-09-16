@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import TechChip from "./TechChip";
 
 interface ProjectCardProps {
   slug: string;
@@ -56,13 +57,10 @@ export default function ProjectCard({
             <h3 className="text-xl font-bold text-blue-900 mb-2">{title}</h3>
             <p className="text-sm text-gray-600 line-clamp-2 flex-grow">{description}</p>
 
-            <ul className="flex flex-wrap gap-2 mt-3 text-sm text-red-600 font-medium">
+            <ul className="flex flex-wrap gap-2 mt-3">
               {techStack.map((tech, idx) => (
-                <li
-                  key={idx}
-                  className="bg-red-100 text-red-700 px-2 py-1 rounded-md"
-                >
-                  {tech}
+                <li key={idx}>
+                  <TechChip>{tech}</TechChip>
                 </li>
               ))}
             </ul>

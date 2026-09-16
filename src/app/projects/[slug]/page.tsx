@@ -5,6 +5,7 @@ import type { Project } from "@/types/project";
 import Button from "@/components/Button";
 import { Github, ExternalLink, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import TechChip from "@/components/TechChip";
 
 export const dynamic = "force-static";
 
@@ -25,7 +26,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   if (!project) return notFound();
 
   return (
-    <main className="max-w-11/12 mx-auto px-4 py-16">
+    <main className="max-w-6xl mx-auto px-4 py-16">
       <Link
         href="/projects"
         className="inline-flex items-center gap-2 text-lg underline text-red-500 hover:text-red-300 mb-6"
@@ -33,18 +34,13 @@ export default async function ProjectDetailPage({ params }: Props) {
         <ArrowLeft size={16} />
         Back to Projects
       </Link>
-      <h2 className="text-3xl md:text-4xl font-medium mb-6 text-center text-white">
+      <h2 className="text-3xl md:text-4xl font-medium font-audiowide mb-6 text-center text-white">
         {project.title}
       </h2>
 
       <div className="flex flex-wrap gap-2 mb-4 justify-center">
         {project.techStack.map((tech) => (
-          <span
-            key={tech}
-            className="text-sm px-3 py-1 bg-blue-100 text-blue-700 rounded"
-          >
-            {tech}
-          </span>
+          <TechChip key={tech}>{tech}</TechChip>
         ))}
       </div>
 

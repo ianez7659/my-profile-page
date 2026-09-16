@@ -25,7 +25,7 @@ export default function SkillCard({ category, icon, skills }: SkillCardProps) {
         transition: { duration: 0.2 }
       }}
     >
-      <div className="border border-gray-400 rounded-xl p-4 flex flex-col h-full">
+      <div className="flex flex-col h-full">
         <div className="flex items-center gap-3 mb-4">
           {LucideIcon && (
             <LucideIcon className="w-6 h-6 text-blue-950 shrink-0" />
@@ -39,7 +39,7 @@ export default function SkillCard({ category, icon, skills }: SkillCardProps) {
           {skills.map((skill) => (
             <span
               key={skill}
-              className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm"
+              className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm"
             >
               {skill}
             </span>

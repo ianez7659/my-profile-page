@@ -44,39 +44,37 @@ export default function BlogContent({ posts }: BlogContentProps) {
             <li key={post.slug}>
               <Link href={`/blog/${post.slug}`}>
                 <div className="group bg-white border border-neutral-300 rounded-xl p-4 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1">
-                  <div className="border border-neutral-400 rounded-lg p-4">
-                    <h2 className="text-xl font-bold text-blue-900 group-hover:text-red-500 transition-colors duration-300">
-                      {post.title}
-                    </h2>
+                  <h2 className="text-xl font-bold text-blue-900 group-hover:text-red-500 transition-colors duration-300">
+                    {post.title}
+                  </h2>
 
-                    <p className="text-sm text-blue-800 mt-1">
-                      {new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </p>
+                  <p className="text-sm text-blue-800 mt-1">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </p>
 
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {post.tags.map((tag: string) => (
-                        <span
-                          key={tag}
-                          className={`text-[11px] px-2 py-0.5 rounded-full font-medium ${
-                            (selectedCategory === "Hobby/Interests" && (tag === "Hobby" || tag === "Interests")) ||
-                            tag === selectedCategory
-                              ? "bg-red-500 text-white" 
-                              : "bg-red-100 text-red-700"
-                          }`}
-                        >
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <p className="text-sm text-gray-800 mt-4 line-clamp-2">
-                      {post.excerpt}
-                    </p>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {post.tags.map((tag: string) => (
+                      <span
+                        key={tag}
+                        className={`text-[11px] px-2 py-0.5 rounded-full font-medium ${
+                          (selectedCategory === "Hobby/Interests" && (tag === "Hobby" || tag === "Interests")) ||
+                          tag === selectedCategory
+                            ? "bg-red-500 text-white" 
+                            : "bg-red-100 text-red-700"
+                        }`}
+                      >
+                        #{tag}
+                      </span>
+                    ))}
                   </div>
+
+                  <p className="text-sm text-gray-700 mt-4 line-clamp-2">
+                    {post.excerpt}
+                  </p>
                 </div>
               </Link>
             </li>
