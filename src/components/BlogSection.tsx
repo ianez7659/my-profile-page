@@ -18,7 +18,7 @@ export default function BlogSection() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col border border-gray-200 rounded-xl p-6 bg-white shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+              className="group flex flex-col border border-gray-200 rounded-xl p-6 bg-white shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
             >
               <h2 className="text-xl font-semibold text-blue-950 group-hover:underline">
                 {post.title}

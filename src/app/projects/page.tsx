@@ -20,7 +20,7 @@ export default function ProjectsPage() {
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="group block rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all bg-white"
+            className="group block rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
           >
             <div className="relative w-full aspect-video overflow-hidden bg-gray-100">
               <Image

@@ -1,5 +1,3 @@
-"use client";
-
 type Props = {
   children: React.ReactNode;
   /** Slightly wider underline on hover (default: w-24) */

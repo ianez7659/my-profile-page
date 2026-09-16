@@ -1,5 +1,3 @@
-"use client";
-
 import { Mail, Github, Linkedin } from "lucide-react";
 import ResumeButton from "@/components/ResumeButton";
 import LandingSection from "@/components/LandingSection";
@@ -17,7 +15,7 @@ export default function ContactSection() {
         <div className="flex justify-center gap-6  text-2xl mb-6">
           <a
             href="mailto:ianez7659@gmail.com"
-            className="hover:opacity-80"
+            className="hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
             aria-label="email"
           >
             <Mail size={28} className="hover:text-red-500" />
@@ -26,7 +24,7 @@ export default function ContactSection() {
             href="https://github.com/ianez7659"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80"
+            className="hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
             aria-label="github"
           >
             <Github size={28} className="hover:text-red-500" />
@@ -35,7 +33,7 @@ export default function ContactSection() {
             href="https://www.linkedin.com/in/ianhklee/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80"
+            className="hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
             aria-label="linkedin"
           >
             <Linkedin size={28} className="hover:text-red-500" />

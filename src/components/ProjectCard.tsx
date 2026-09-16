@@ -38,7 +38,10 @@ export default function ProjectCard({
       }}
     >
       <div className="group rounded-2xl shadow-lg p-4 bg-white text-gray-900 transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl relative h-full flex flex-col">
-        <Link href={`/projects/${slug}`} className="flex flex-col flex-grow">
+        <Link
+          href={`/projects/${slug}`}
+          className="flex flex-col flex-grow rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+        >
           <div className="relative w-full aspect-video overflow-hidden rounded-lg flex-shrink-0 bg-gray-100">
             <Image
               src={image}
@@ -73,7 +76,7 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${title} GitHub repository`}
-            className="text-gray-500 hover:text-red-600 transition-colors duration-300"
+            className="text-gray-500 hover:text-red-600 transition-colors duration-300 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
           >
             <Github className="w-5 h-5" />
           </a>
@@ -83,7 +86,7 @@ export default function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${title} live demo`}
-              className="text-gray-500 hover:text-red-600 transition-colors duration-300"
+              className="text-gray-500 hover:text-red-600 transition-colors duration-300 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
             >
               <ExternalLink className="w-5 h-5" />
             </a>

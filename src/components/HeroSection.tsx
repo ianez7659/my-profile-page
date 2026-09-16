@@ -16,13 +16,13 @@ export default function HeroSection() {
           className="flex-1 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
         >
           <motion.h2 
             className="text-red-500 text-2xl md:text-4xl font-medium leading-tight mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.3, delay: 0.05, ease: "easeOut" }}
           >
             Web Developer
             <br />
@@ -30,7 +30,7 @@ export default function HeroSection() {
               className="text-white text-6xl md:text-8xl"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+              transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
             >
               Ian Lee,
             </motion.span>
@@ -40,7 +40,7 @@ export default function HeroSection() {
             className="text-white text-xl md:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
             >
               Focused on{" "}
             </motion.span>
@@ -48,7 +48,7 @@ export default function HeroSection() {
               className="text-white text-xl md:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
             >
               modern
             </motion.span>
@@ -56,7 +56,7 @@ export default function HeroSection() {
             className="text-white text-xl md:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
+              transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
             >
               , production-ready{" "}
             </motion.span>
@@ -64,7 +64,7 @@ export default function HeroSection() {
               className="text-xl md:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+              transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
             >
               web applications
             </motion.span>
@@ -73,7 +73,7 @@ export default function HeroSection() {
             className="mt-6"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.4, ease: "easeOut" }}
+            transition={{ duration: 0.3, delay: 0.2, ease: "easeOut" }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           />
@@ -84,7 +84,7 @@ export default function HeroSection() {
           className="flex justify-center md:justify-end"
           initial={{ opacity: 0, x: 50, scale: 0.8 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
         >
           <motion.div 
             className="w-64 h-64 md:w-80 md:h-80 lg:w-110 lg:h-110 rounded-full overflow-hidden shadow-2xl border-6 border-white"

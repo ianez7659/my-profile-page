@@ -50,7 +50,10 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-black text-white shadow-md transition-all duration-300">
       <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center relative">
-        <Link href="/" className="flex items-center gap-3">
+        <Link
+          href="/"
+          className="flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
+        >
           <Image
             src="/images/Ian-2D.webp"
             alt="Ian Lee"
@@ -72,7 +75,7 @@ export default function Navbar() {
 
         {/* Mobile toggle button */}
         <button
-          className="md:hidden z-50"
+          className="md:hidden z-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -87,12 +90,12 @@ export default function Navbar() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#ffdd40]"
+                  className="hover:text-[#ffdd40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
                 >
                   {item.label}
                 </a>
               ) : (
-                <Link href={item.href} className="hover:text-[#ffdd40]">
+                <Link href={item.href} className="hover:text-[#ffdd40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm">
                   {item.label}
                 </Link>
               )}
@@ -117,7 +120,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
-                  className="hover:text-[#ffdd40]"
+                  className="hover:text-[#ffdd40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
                 >
                   {item.label}
                 </a>
@@ -125,7 +128,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setMenuOpen(false)} // Close when cliked
-                  className="hover:text-[#ffdd40]"
+                  className="hover:text-[#ffdd40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
                 >
                   {item.label}
                 </Link>

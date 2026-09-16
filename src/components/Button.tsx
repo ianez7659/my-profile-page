@@ -15,7 +15,7 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const base =
-    "w-36 md:w-48 px-4 py-3 rounded text-lg text-center rounded-lg transition";
+    "w-36 md:w-48 px-4 py-3 rounded text-lg text-center rounded-lg transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
   const variants = {
     primary: "bg-black text-white hover:bg-gray-800",
     outline:

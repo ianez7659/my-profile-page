@@ -46,7 +46,7 @@ export default function BlogSidebar({ posts }: BlogSidebarProps) {
               <li key={category}>
                 <button
                   onClick={() => setSelectedCategory(category)}
-                  className={`w-full text-left hover:text-red-500 transition-colors ${
+                  className={`w-full text-left rounded-sm hover:text-red-500 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
                     selectedCategory === category ? "text-red-500 font-semibold" : ""
                   }`}
                 >
@@ -62,7 +62,7 @@ export default function BlogSidebar({ posts }: BlogSidebarProps) {
           </ul>
           
           <button
-            className="md:hidden absolute -right-12 top-[120px] transform -translate-y-1/2 px-3 py-2 text-white bg-red-600 rounded-r-lg shadow-lg hover:bg-[#1e3a8a] transition-all duration-300 z-50"
+            className="md:hidden absolute -right-12 top-[120px] transform -translate-y-1/2 px-3 py-2 text-white bg-red-600 rounded-r-lg shadow-lg hover:bg-[#1e3a8a] transition-all duration-300 z-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle sidebar"
           >

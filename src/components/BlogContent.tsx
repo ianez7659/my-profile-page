@@ -42,7 +42,10 @@ export default function BlogContent({ posts }: BlogContentProps) {
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
             <li key={post.slug}>
-              <Link href={`/blog/${post.slug}`}>
+              <Link
+                href={`/blog/${post.slug}`}
+                className="block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+              >
                 <div className="group bg-white border border-neutral-300 rounded-xl p-4 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1">
                   <h2 className="text-xl font-bold text-blue-900 group-hover:text-red-500 transition-colors duration-300">
                     {post.title}
