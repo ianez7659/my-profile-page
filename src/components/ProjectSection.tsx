@@ -30,9 +30,11 @@ export default function ProjectsSection() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {projects.slice(0, 3).map((project, idx) => (
-          <ProjectCard key={idx} {...project} />
-        ))}
+        {projects
+          .filter((project) => project.featured)
+          .map((project, idx) => (
+            <ProjectCard key={idx} {...project} />
+          ))}
       </motion.div>
       <div className="text-center mt-10">
         <Button href="/projects" variant="outline">

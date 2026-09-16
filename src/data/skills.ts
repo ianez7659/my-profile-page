@@ -49,13 +49,20 @@
 
 export const skills = [
   {
-    category: "Frontend",
+    category: "Languages",
     icon: "Code2",
+    skills: [
+      "TypeScript",
+      "JavaScript",
+      "Python"
+    ],
+  },
+  {
+    category: "Frontend",
+    icon: "Layout",
     skills: [
       "React",
       "Next.js",
-      "TypeScript",
-      "JavaScript",
       "Tailwind CSS",
       "Zustand",
       "GSAP",
@@ -72,8 +79,7 @@ export const skills = [
       "FastAPI",
       "REST APIs",
       "JWT Authentication",
-      "NextAuth.js",
-      "Prisma"
+      "NextAuth.js"
     ],
   },
   {
@@ -82,7 +88,17 @@ export const skills = [
     skills: [
       "PostgreSQL",
       "MongoDB",
-      "Supabase"
+      "Supabase",
+      "Prisma"
+    ],
+  },
+  {
+    category: "Testing",
+    icon: "FlaskConical",
+    skills: [
+      "Jest",
+      "React Testing Library",
+      "Playwright"
     ],
   },
   {
@@ -91,9 +107,9 @@ export const skills = [
     skills: [
       "Git",
       "GitHub",
+      "Docker",
       "Vercel",
-      "Render",
-      "Postman"
+      "Render"
     ],
   },
 ];

@@ -68,7 +68,7 @@ export default function Navbar() {
                 isScrolled ? "max-h-6 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              Front-end focused web developer
+              Full-stack web development
             </span>
           </div>
         </Link>

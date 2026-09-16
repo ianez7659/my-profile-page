@@ -3,6 +3,7 @@ import type { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     slug: "ai-ticket-dashboard",
+    featured: true,
     title: "AI Ticket Dashboard - Customer Support Center",
     description:
       "AI-powered customer support ticket management system with admin dashboard, featuring ticket submission, AI-assisted responses, and real-time ticket tracking.",
@@ -94,6 +95,7 @@ export const projects: Project[] = [
   
   {
     slug: "Jobflow",
+    featured: true,
     title: "Jobflow - AI Assisted Job Tracker",
     description:
       "AI Assisted Job application tracking dashboard built with Next.js and PostgreSQL, featuring real-time analytics, authentication, and responsive UI.",
@@ -280,6 +282,7 @@ export const projects: Project[] = [
 
   {
     slug: "TEZUKURI-VAN",
+    featured: true,
     title: "TEZUKURI VAN – Real Client Marketing Website",
     description:
       "A fully commissioned marketing website built for a real client, featuring a custom admin dashboard, real-time content management via Supabase, and a sleek, responsive design.",

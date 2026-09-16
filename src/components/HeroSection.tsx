@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import Button from "@/components/Button";
 import ResumeButton from "@/components/ResumeButton";
 
 export default function HeroSection() {
@@ -18,65 +20,57 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
         >
-          <motion.h2 
-            className="text-red-500 text-2xl md:text-4xl font-medium leading-tight mb-4"
+          <motion.p
+            className="text-red-500 text-2xl md:text-4xl font-medium leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.05, ease: "easeOut" }}
           >
             Web Developer
-            <br />
-            <motion.span 
-              className="text-white text-6xl md:text-8xl"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
-            >
-              Ian Lee,
-            </motion.span>
-            <br />
-            
-            <motion.span
-            className="text-white text-xl md:text-3xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
-            >
-              Focused on{" "}
-            </motion.span>
-            <motion.span 
-              className="text-white text-xl md:text-3xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
-            >
-              modern
-            </motion.span>
-            <motion.span
-            className="text-white text-xl md:text-3xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
-            >
-              , production-ready{" "}
-            </motion.span>
-            <motion.span
-              className="text-xl md:text-3xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
-            >
-              web applications
-            </motion.span>
+          </motion.p>
+
+          <motion.h2
+            className="text-white text-6xl md:text-8xl font-medium font-audiowide leading-tight mt-2"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
+          >
+            Ian Lee
           </motion.h2>
-          <ResumeButton
-            className="mt-6"
+
+          <motion.p
+            className="text-white text-lg md:text-xl mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
+          >
+            React · Next.js · Node · PostgreSQL
+          </motion.p>
+
+          <motion.p
+            className="text-gray-300 text-sm md:text-base mt-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
+          >
+            Vancouver, BC
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 mt-8 items-center justify-center md:justify-start"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2, ease: "easeOut" }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          />
+          >
+            <ResumeButton
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+            />
+            <Button href="/projects" variant="outline" size="auto">
+              <ArrowRight size={20} aria-hidden />
+              View Projects
+            </Button>
+          </motion.div>
         </motion.div>
 
         {/* Right: Image */}
