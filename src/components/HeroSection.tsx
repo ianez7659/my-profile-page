@@ -93,7 +93,7 @@ export default function HeroSection() {
               className="pointer-events-none absolute -inset-4 rounded-full border border-red-500/60"
             />
             <Image
-              src="/images/me5.jpg"
+              src="/images/me5.webp"
               alt="Profile image"
               width={600}
               height={600}

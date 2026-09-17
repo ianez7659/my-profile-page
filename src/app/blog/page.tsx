@@ -5,6 +5,12 @@ import BlogSidebar from "@/components/BlogSidebar";
 import BlogContent from "@/components/BlogContent";
 import { BlogProvider } from "@/contexts/BlogContext";
 
+export const metadata = {
+  title: "Blog",
+  description:
+    "Posts on front-end work, MDX and animation experiments, and the projects behind this portfolio.",
+};
+
 export default function BlogListPage() {
   const posts = getAllPosts();
 
