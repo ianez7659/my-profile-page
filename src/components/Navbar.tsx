@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { RESUME_HREF } from "./ResumeButton";
 
 const navItems = [
@@ -19,6 +19,14 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
+  // scrollHeight and clientHeight are integer-rounded while the real scroll offset is
+  // fractional on scaled displays, so scrollYProgress overshoots 1 at the very bottom.
+  // Feeding that straight into scaleX pushed the bar past the viewport edge, which
+  // raised a horizontal scrollbar, which shortened the viewport, which moved the scroll
+  // position -- a loop that shook the page. Clamp it.
+  const progressScaleX = useTransform(scrollYProgress, (value) =>
+    Math.min(value, 1)
+  );
 
   // Handle scroll effect
   useEffect(() => {
@@ -140,12 +148,17 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Scroll progress: the 4px section underline motif at page scale. */}
-      <motion.div
+      {/* Scroll progress: the 4px section underline motif at page scale.
+          The wrapper stops sub-pixel rounding in the transform from widening the document. */}
+      <div
         aria-hidden
-        style={{ scaleX: scrollYProgress }}
-        className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-red-600"
-      />
+        className="absolute bottom-0 left-0 h-[2px] w-full overflow-hidden"
+      >
+        <motion.div
+          style={{ scaleX: progressScaleX }}
+          className="h-full w-full origin-left bg-red-600"
+        />
+      </div>
     </nav>
   );
 }
