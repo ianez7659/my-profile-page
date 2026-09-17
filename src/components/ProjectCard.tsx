@@ -43,7 +43,7 @@ export default function ProjectCard({
         transition: { duration: 0.3 }
       }}
     >
-      <div className="group rounded-2xl shadow-lg p-4 bg-white text-gray-900 transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl relative h-full flex flex-col">
+      <div className="group rounded-2xl shadow-[0_0_44px_4px_rgba(59,91,217,0.45)] hover:shadow-[0_0_68px_10px_rgba(59,91,217,0.65)] p-4 bg-white text-gray-900 transform transition duration-300 hover:scale-[1.02] relative h-full flex flex-col">
         <Link
           href={`/projects/${slug}`}
           className={`flex flex-col flex-grow rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 ${

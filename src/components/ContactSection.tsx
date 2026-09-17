@@ -9,7 +9,7 @@ export default function ContactSection() {
   return (
     <LandingSection id="contact" variant="plain" className="text-gray-100">
       <div className="max-w-3xl mx-auto text-center">
-        <SectionHeading>Contacts</SectionHeading>
+        <SectionHeading index="05">Contacts</SectionHeading>
         <p className="text-xl text-gray-100 mb-8">
           Feel free to reach out to me for any questions or opportunities!
         </p>
@@ -51,6 +51,12 @@ export default function ContactSection() {
         </div>
 
         <ResumeButton />
+
+        {/* Finish line: the scroll ends here, and it says so. */}
+        <div
+          aria-hidden
+          className="mt-14 h-[2px] w-full max-w-md mx-auto bg-[linear-gradient(to_right,transparent,#dc2626,transparent)]"
+        />
       </div>
     </LandingSection>
   );

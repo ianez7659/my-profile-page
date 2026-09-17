@@ -21,7 +21,7 @@ export default function SkillsSection() {
   return (
     <LandingSection id="skills" variant="band">
       <div className="text-center">
-        <SectionHeading underlineHoverClass="group-hover:w-36">
+        <SectionHeading index="02" underlineHoverClass="group-hover:w-36">
           Technical Stacks
         </SectionHeading>
 

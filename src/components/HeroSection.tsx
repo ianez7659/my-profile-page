@@ -88,10 +88,20 @@ export default function HeroSection() {
             }}
             transition={{ duration: 0.3 }}
           >
+            {/* Static orbit, and one lap marker running it. A dense dashed ring
+                rotating slowly reads as standing still; a single dot never does. */}
             <span
               aria-hidden
-              className="pointer-events-none absolute -inset-4 rounded-full border border-red-500/60"
+              className="pointer-events-none absolute -inset-4 rounded-full border border-red-500/40"
             />
+            <motion.span
+              aria-hidden
+              className="pointer-events-none absolute -inset-4"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+            >
+              <span className="absolute left-1/2 top-0 block w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600 shadow-[0_0_14px_3px_rgba(220,38,38,0.65)]" />
+            </motion.span>
             <Image
               src="/images/me5.webp"
               alt="Profile image"

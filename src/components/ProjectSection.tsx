@@ -24,7 +24,7 @@ const featuredProjects = projects
 export default function ProjectsSection() {
   return (
     <LandingSection id="projects" variant="plain" className="text-white">
-      <SectionHeading underlineHoverClass="group-hover:w-32">
+      <SectionHeading index="03" underlineHoverClass="group-hover:w-32">
         Projects
       </SectionHeading>
       <motion.div

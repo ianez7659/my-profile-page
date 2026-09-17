@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <LandingSection id="about" variant="plain">
       <div className="flex flex-col items-center">
-        <SectionHeading underlineHoverClass="group-hover:w-36">
+        <SectionHeading index="01" underlineHoverClass="group-hover:w-36">
           About
         </SectionHeading>
         <div className="w-full max-w-4xl rounded-2xl bg-white p-6 shadow-md text-gray-700">
@@ -16,13 +16,19 @@ export default function AboutSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-            <Image
-              src="/images/Ian-2D.webp"
-              alt="Ian Lee"
-              width={100}
-              height={100}
-              className="rounded-full shrink-0 self-center sm:self-start"
-            />
+            <span className="relative shrink-0 self-center sm:self-start">
+              <span
+                aria-hidden
+                className="pointer-events-none absolute -inset-2 rounded-full border border-dashed border-red-600/50"
+              />
+              <Image
+                src="/images/Ian-2D.webp"
+                alt="Ian Lee"
+                width={100}
+                height={100}
+                className="rounded-full"
+              />
+            </span>
             <div className="text-lg leading-relaxed">
               <p className="mb-4">
                 Web developer focused on building production-ready web applications,
