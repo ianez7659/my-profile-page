@@ -27,7 +27,8 @@ export interface Project {
   image: string;
   github: string;
   demo?: string;
-  featured?: boolean;
+  /** Landing page slot. Lower comes first; omit to keep a project off the landing page. */
+  featured?: number;
   techStack: string[];
   sections: ProjectSection[];
 }

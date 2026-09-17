@@ -15,6 +15,8 @@ interface ProjectCardProps {
   github: string;
   demo?: string;
   className?: string;
+  /** split: lead card puts the shot beside the text so full width does not mean full height. */
+  layout?: "stack" | "split";
 }
 
 export default function ProjectCard({
@@ -26,7 +28,9 @@ export default function ProjectCard({
   github,
   demo,
   className = "",
+  layout = "stack",
 }: ProjectCardProps) {
+  const isSplit = layout === "split";
   return (
     <motion.div
       className={`h-full ${className}`.trim()}
@@ -42,9 +46,15 @@ export default function ProjectCard({
       <div className="group rounded-2xl shadow-lg p-4 bg-white text-gray-900 transform transition duration-300 hover:scale-[1.02] hover:shadow-2xl relative h-full flex flex-col">
         <Link
           href={`/projects/${slug}`}
-          className="flex flex-col flex-grow rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+          className={`flex flex-col flex-grow rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 ${
+            isSplit ? "md:flex-row md:items-start md:gap-6" : ""
+          }`}
         >
-          <div className="relative w-full aspect-video overflow-hidden rounded-lg flex-shrink-0 bg-gray-100">
+          <div
+            className={`relative w-full aspect-video overflow-hidden rounded-lg flex-shrink-0 bg-gray-100 ${
+              isSplit ? "md:w-1/2" : ""
+            }`}
+          >
             <Image
               src={image}
               alt={title}
@@ -58,7 +68,7 @@ export default function ProjectCard({
             </div>
           </div>
 
-          <div className="flex flex-col flex-grow mt-4">
+          <div className={`flex flex-col flex-grow mt-4 ${isSplit ? "md:mt-0" : ""}`}>
             <h3 className="text-xl font-bold text-blue-900 mb-2">{title}</h3>
             <p className="text-sm text-gray-600 line-clamp-2 flex-grow">{description}</p>
 
