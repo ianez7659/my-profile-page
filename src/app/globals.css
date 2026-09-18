@@ -198,3 +198,25 @@ body {
     }
   }
 }
+
+/* Page entrance.
+   It moves the page and never fades it. A time-based animation whose timeline is
+   suspended -- which is what happens to a tab that is never rendered -- holds its
+   `from` keyframe indefinitely, so anything hidden in that keyframe stays hidden.
+   Offsetting by 20px is survivable in that state; opacity: 0 is not. The measured
+   failure was a suspended timeline sitting at currentTime 0 forever.
+   No fill-mode: outside the run the element is simply itself. */
+@keyframes page-enter {
+  from {
+    translate: 20px 0;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-enter {
+    animation: page-enter 300ms ease-out;
+  }
+}
