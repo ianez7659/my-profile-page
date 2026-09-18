@@ -28,23 +28,24 @@ export default async function BlogDetailPage({ params }: Props) {
   });
 
   return (
-    <main className="max-w-4xl mx-auto px-4 md:px-6 py-16 text-gray-100 bg-[#1e3a8a] rounded-xl">
+    <main className="max-w-3xl mx-auto px-4 md:px-6 py-16 text-gray-100">
       <Link
         href="/blog"
-        className="inline-flex items-center gap-2 text-lg text-white hover:text-blue-300 mb-6"
+        className="inline-flex items-center gap-2 text-lg text-white hover:text-red-500 transition-colors mb-6 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         <ArrowLeft size={25} />
         Back to Blog
       </Link>
-      <h1 className="text-3xl font-bold mb-4">{post.meta.title}</h1>
-      <p className="text-sm text-gray-100 mb-8">{post.meta.date}</p>
+      <h1 className="text-3xl font-bold mb-3">{post.meta.title}</h1>
+      <span className="block h-[4px] w-10 bg-red-600 rounded mb-4" />
+      <p className="text-sm text-gray-400 mb-8">{post.meta.date}</p>
 
       {post.meta.tags?.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-8">
           {post.meta.tags.map((tag: string) => (
             <span
               key={tag}
-              className="inline-block bg-gray-500 text-sm text-gray-100 px-2 py-1 rounded"
+              className="inline-block bg-gray-100/15 text-[11px] text-gray-100 px-2.5 py-0.5 rounded-full font-medium"
             >
               #{tag}
             </span>

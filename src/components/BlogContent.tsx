@@ -35,7 +35,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
         </div>
       )}
 
-      <ul className="space-y-8 bg-[#1e3a8a] rounded-xl p-6">
+      <ul className="space-y-8">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
             <li key={post.slug}>
