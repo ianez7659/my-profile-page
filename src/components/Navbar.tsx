@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { RESUME_HREF } from "./ResumeButton";
@@ -15,6 +16,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -27,6 +29,10 @@ export default function Navbar() {
   const progressScaleX = useTransform(scrollYProgress, (value) =>
     Math.min(value, 1)
   );
+
+  // "/" only matches itself; a section route also owns its detail pages.
+  const isCurrent = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   // Handle scroll effect
   useEffect(() => {
@@ -105,8 +111,18 @@ export default function Navbar() {
                   {item.label}
                 </a>
               ) : (
-                <Link href={item.href} className="hover:text-[#ffdd40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm">
+                <Link
+                  href={item.href}
+                  aria-current={isCurrent(item.href) ? "page" : undefined}
+                  className="relative inline-block pb-2 hover:text-[#ffdd40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
+                >
                   {item.label}
+                  {isCurrent(item.href) && (
+                    <span
+                      aria-hidden
+                      className="absolute inset-x-0 bottom-0 h-[4px] rounded bg-red-600"
+                    />
+                  )}
                 </Link>
               )}
             </li>
@@ -138,9 +154,16 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setMenuOpen(false)} // Close when cliked
-                  className="hover:text-[#ffdd40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
+                  aria-current={isCurrent(item.href) ? "page" : undefined}
+                  className="relative inline-block pb-2 hover:text-[#ffdd40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
                 >
                   {item.label}
+                  {isCurrent(item.href) && (
+                    <span
+                      aria-hidden
+                      className="absolute inset-x-0 bottom-0 h-[4px] rounded bg-red-600"
+                    />
+                  )}
                 </Link>
               )}
             </li>

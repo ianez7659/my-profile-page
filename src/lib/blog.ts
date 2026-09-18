@@ -42,3 +42,22 @@ export async function getPostBySlug(slug: string) {
     meta: data,
   };
 }
+
+/**
+ * Newest first. The list page and the post pager both read this, so the order a
+ * reader sees in the list is the order "previous" and "next" walk.
+ */
+export function getPostsNewestFirst(): PostMeta[] {
+  return getAllPosts().sort((a, b) => b.slug.localeCompare(a.slug));
+}
+
+/** The posts either side of `slug`: previous is the older one, next the newer. */
+export function getAdjacentPosts(slug: string) {
+  const posts = getPostsNewestFirst();
+  const index = posts.findIndex((post) => post.slug === slug);
+  if (index === -1) return { previous: null, next: null };
+  return {
+    previous: posts[index + 1] ?? null,
+    next: posts[index - 1] ?? null,
+  };
+}

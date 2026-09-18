@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getPostBySlug } from "@/lib/blog";
+import { getPostBySlug, getAdjacentPosts } from "@/lib/blog";
+import PagerLink from "@/components/PagerLink";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import Callout from "@/components/Callout";
@@ -15,6 +16,8 @@ export default async function BlogDetailPage({ params }: Props) {
   const post = await getPostBySlug(slug);
 
   if (!post) return notFound();
+
+  const { previous, next } = getAdjacentPosts(slug);
 
   const { content } = await compileMDX({
     source: post.content,
@@ -54,6 +57,34 @@ export default async function BlogDetailPage({ params }: Props) {
       )}
 
       <article className="prose prose-md">{content}</article>
+
+      {(previous || next) && (
+        <nav aria-label="More posts">
+          <hr className="border-0 h-px bg-white/20 my-10" />
+          <div className="grid gap-6 sm:grid-cols-2">
+            {previous ? (
+              <PagerLink
+                href={`/blog/${previous.slug}`}
+                label="PREVIOUS"
+                title={previous.title}
+                direction="prev"
+                layout="stack"
+              />
+            ) : (
+              <span aria-hidden />
+            )}
+            {next && (
+              <PagerLink
+                href={`/blog/${next.slug}`}
+                label="NEXT"
+                title={next.title}
+                direction="next"
+                layout="stack"
+              />
+            )}
+          </div>
+        </nav>
+      )}
     </main>
   );
 }
