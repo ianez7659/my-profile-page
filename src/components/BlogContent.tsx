@@ -1,27 +1,27 @@
 "use client";
 
-import Link from "next/link";
+import type { PostMeta } from "@/lib/blog";
+import BlogPostCard from "@/components/BlogPostCard";
 import { useBlogContext } from "@/contexts/BlogContext";
 
 interface BlogContentProps {
-  posts: Array<{
-    slug: string;
-    title: string;
-    date: string;
-    excerpt: string;
-    tags: string[];
-  }>;
+  posts: PostMeta[];
 }
 
 export default function BlogContent({ posts }: BlogContentProps) {
   const { selectedCategory } = useBlogContext();
 
-  // Filter posts by selected category
-  const filteredPosts = selectedCategory === "All" 
-    ? posts 
-    : selectedCategory === "Hobby/Interests"
-    ? posts.filter(post => post.tags.includes("Hobby") || post.tags.includes("Interests"))
-    : posts.filter(post => post.tags.includes(selectedCategory));
+  // A category maps to the tags it selects; the card only marks what it is handed.
+  const activeTags =
+    selectedCategory === "All"
+      ? undefined
+      : selectedCategory === "Hobby/Interests"
+      ? ["Hobby", "Interests"]
+      : [selectedCategory];
+
+  const filteredPosts = activeTags
+    ? posts.filter((post) => post.tags.some((tag) => activeTags.includes(tag)))
+    : posts;
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -39,44 +39,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
             <li key={post.slug}>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-              >
-                <div className="group bg-white border border-neutral-300 rounded-xl p-4 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1">
-                  <h2 className="text-xl font-bold text-blue-900 group-hover:text-red-500 transition-colors duration-300">
-                    {post.title}
-                  </h2>
-
-                  <p className="text-sm text-blue-800 mt-1">
-                    {new Date(post.date).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {post.tags.map((tag: string) => (
-                      <span
-                        key={tag}
-                        className={`text-[11px] px-2 py-0.5 rounded-full font-medium ${
-                          (selectedCategory === "Hobby/Interests" && (tag === "Hobby" || tag === "Interests")) ||
-                          tag === selectedCategory
-                            ? "bg-red-600 text-white"
-                            : "bg-red-100 text-red-700"
-                        }`}
-                      >
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <p className="text-sm text-gray-700 mt-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                </div>
-              </Link>
+              <BlogPostCard post={post} activeTags={activeTags} />
             </li>
           ))
         ) : (

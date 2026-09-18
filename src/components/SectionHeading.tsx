@@ -4,6 +4,8 @@ type Props = {
   index?: string;
   /** Slightly wider underline on hover (default: w-24) */
   underlineHoverClass?: string;
+  /** Landing sections sit under the page h1; a list page's own title is the h1. */
+  as?: "h1" | "h2";
 };
 
 /**
@@ -13,9 +15,10 @@ export default function SectionHeading({
   children,
   index,
   underlineHoverClass = "group-hover:w-24",
+  as: Tag = "h2",
 }: Props) {
   return (
-    <h2
+    <Tag
       className={`group text-3xl md:text-4xl font-medium mb-10 md:mb-12 font-audiowide relative text-center`}
     >
       {index && (
@@ -27,6 +30,6 @@ export default function SectionHeading({
       <span
         className={`block mx-auto mt-2 h-[4px] w-10 bg-red-600 rounded transition-all duration-500 ${underlineHoverClass}`}
       />
-    </h2>
+    </Tag>
   );
 }

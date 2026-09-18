@@ -1,51 +1,44 @@
-import Link from "next/link";
-import Image from "next/image";
 import { projects } from "@/data/projects";
-import TechChip from "@/components/TechChip";
+import ProjectCard from "@/components/ProjectCard";
+import LandingSection from "@/components/LandingSection";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata = {
   title: "Projects",
   description: "Explore personal projects built with modern web technologies.",
 };
 
+/** Featured first, in the order the data ranks them; the rest keep their data order. */
+const orderedProjects = [...projects].sort(
+  (a, b) =>
+    (a.featured ?? Number.MAX_SAFE_INTEGER) -
+    (b.featured ?? Number.MAX_SAFE_INTEGER)
+);
+
 export default function ProjectsPage() {
   return (
-    <main className="max-w-6xl mx-auto px-4 py-16 text-white">
-      <h1 className="text-3xl md:text-4xl font-medium font-audiowide mb-12 text-center">
-        My Projects
-      </h1>
+    <main>
+      <LandingSection variant="plain">
+        <SectionHeading
+          as="h1"
+          index={`ALL · ${String(projects.length).padStart(2, "0")}`}
+          underlineHoverClass="group-hover:w-32"
+        >
+          Projects
+        </SectionHeading>
 
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <Link
-            key={project.slug}
-            href={`/projects/${project.slug}`}
-            className="group block rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-          >
-            <div className="relative w-full aspect-video overflow-hidden bg-gray-100">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-4">
-              <h2 className="text-lg font-semibold group-hover:underline text-blue-900">
-                {project.title}
-              </h2>
-              <p className="text-sm text-gray-600 mt-2 line-clamp-2">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mt-3">
-                {project.techStack.map((tech) => (
-                  <TechChip key={tech}>{tech}</TechChip>
-                ))}
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {orderedProjects.map((project, idx) => (
+            <ProjectCard
+              key={project.slug}
+              {...project}
+              /* The lead project takes the full row; the rest pair up beneath it. */
+              className={idx === 0 ? "md:col-span-2" : ""}
+              layout={idx === 0 ? "split" : "stack"}
+            />
+          ))}
+        </div>
+      </LandingSection>
     </main>
   );
 }
