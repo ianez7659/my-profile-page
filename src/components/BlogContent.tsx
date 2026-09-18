@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Rss } from "lucide-react";
 import { useBlogContext } from "@/contexts/BlogContext";
 
 interface BlogContentProps {
@@ -26,9 +25,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl md:text-6xl text-white mb-6 flex items-center gap-2">
-        <Rss size={48} className="text-red-500" /> Blog
-      </h1>
+      <h1 className="text-4xl text-white mb-6">Blog</h1>
 
       {selectedCategory !== "All" && (
         <div className="mb-6">
@@ -66,7 +63,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                         className={`text-[11px] px-2 py-0.5 rounded-full font-medium ${
                           (selectedCategory === "Hobby/Interests" && (tag === "Hobby" || tag === "Interests")) ||
                           tag === selectedCategory
-                            ? "bg-red-500 text-white" 
+                            ? "bg-red-600 text-white"
                             : "bg-red-100 text-red-700"
                         }`}
                       >

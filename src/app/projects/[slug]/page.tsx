@@ -29,7 +29,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     <main className="max-w-6xl mx-auto px-4 py-16">
       <Link
         href="/projects"
-        className="inline-flex items-center gap-2 text-lg underline text-red-500 hover:text-red-300 mb-6 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        className="inline-flex items-center gap-2 text-lg underline text-red-500 hover:text-white mb-6 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         <ArrowLeft size={16} />
         Back to Projects

@@ -46,8 +46,10 @@ export default function BlogSidebar({ posts }: BlogSidebarProps) {
               <li key={category}>
                 <button
                   onClick={() => setSelectedCategory(category)}
-                  className={`w-full text-left rounded-sm hover:text-red-500 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
-                    selectedCategory === category ? "text-red-500 font-semibold" : ""
+                  className={`w-full text-left rounded-sm hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                    selectedCategory === category
+                      ? "text-white font-semibold"
+                      : "text-gray-100"
                   }`}
                 >
                   <span className="flex justify-between items-center">
