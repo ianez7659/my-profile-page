@@ -165,3 +165,36 @@ body {
       radial-gradient(52% 78% at 76% 50%, #1e3a8a 0%, rgba(30, 58, 138, 0) 72%);
   }
 }
+
+/* Scroll-driven entrance.
+   The element is visible by default; the animation exists only where a scroll
+   timeline can drive it. No hydration, no IntersectionObserver, no
+   requestAnimationFrame -- so a background tab, a slow bundle or an unsupported
+   browser can never leave the content blank. Decoration never gates content.
+
+   It animates `translate`, not `transform`, so it composes with the hover lift
+   framer-motion writes to `transform` instead of fighting it. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    translate: 0 50px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .rise-in {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      /* The bare range name means entry 0% -> entry 100%: fully faded in exactly when
+         the element has fully entered. Written without percentages on purpose -- the
+         minifier collapses `entry 20% entry 100%` to `entry 20%`, which silently moves
+         the end of the range to `normal` and leaves cards half-transparent mid-screen. */
+      animation-range: entry;
+    }
+  }
+}

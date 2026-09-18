@@ -33,12 +33,12 @@ export default function ProjectCard({
   const isSplit = layout === "split";
   return (
     <motion.div
-      className={`h-full ${className}`.trim()}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-      whileHover={{ 
+      className={`rise-in h-full ${className}`.trim()}
+      /* The entrance is `.rise-in` in globals.css, driven by the scroll timeline rather
+         than by framer-motion. A JS entrance starting at opacity 0 renders the card
+         invisible on the server and leaves it that way unless hydration, the observer
+         and requestAnimationFrame all run -- and rAF is paused in a background tab. */
+      whileHover={{
         y: -10,
         transition: { duration: 0.3 }
       }}
