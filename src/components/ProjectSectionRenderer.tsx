@@ -1,11 +1,14 @@
 import { ProjectSection } from "@/types/project";
 import ImageSlider from "./ImageSlider";
 import LandingSection from "./LandingSection";
+import SectionHeading from "./SectionHeading";
 
 interface Props {
   section: ProjectSection;
   /** Sections alternate plain and band down the page, so the rhythm comes from position, not type. */
   index: number;
+  /** Course marker, e.g. "02". Absent for a section that is a beat rather than a stage. */
+  stage?: string;
 }
 
 function Paragraphs({ content }: { content: string }) {
@@ -25,15 +28,20 @@ function Paragraphs({ content }: { content: string }) {
   );
 }
 
-export default function ProjectSectionRenderer({ section, index }: Props) {
+export default function ProjectSectionRenderer({
+  section,
+  index,
+  stage,
+}: Props) {
   return (
     <LandingSection variant={index % 2 === 0 ? "plain" : "band"}>
+      {section.title && (
+        <SectionHeading index={stage}>{section.title}</SectionHeading>
+      )}
+
       {section.type === "text" && (
         /* Prose keeps to the reading column even though the band runs full width. */
         <div className="max-w-3xl mx-auto">
-          {section.title && (
-            <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
-          )}
           <Paragraphs content={section.content} />
         </div>
       )}
@@ -41,9 +49,6 @@ export default function ProjectSectionRenderer({ section, index }: Props) {
       {section.type === "image" && (
         /* A screenshot is not the page: hold it in from the full column so 16:9 stays readable. */
         <div className="max-w-4xl mx-auto">
-          {section.title && (
-            <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
-          )}
           <ImageSlider images={section.image} />
         </div>
       )}
@@ -55,9 +60,6 @@ export default function ProjectSectionRenderer({ section, index }: Props) {
           } items-center gap-6 md:gap-10`}
         >
           <div className="w-full md:w-1/2">
-            {section.title && (
-              <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
-            )}
             <Paragraphs content={section.content} />
           </div>
           <div className="w-full md:w-1/2">

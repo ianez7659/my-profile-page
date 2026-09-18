@@ -613,3 +613,13 @@ The application streamlines steel wall delivery workflows by coordinating admini
     ],
   },
 ];
+
+/**
+ * The order the course runs in: featured first by rank, then the rest as the data lists them.
+ * Both /projects and the "next project" pager read this, so the two never disagree.
+ */
+export const orderedProjects: Project[] = [...projects].sort(
+  (a, b) =>
+    (a.featured ?? Number.MAX_SAFE_INTEGER) -
+    (b.featured ?? Number.MAX_SAFE_INTEGER)
+);

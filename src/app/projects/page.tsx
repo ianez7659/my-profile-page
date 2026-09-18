@@ -1,4 +1,4 @@
-import { projects } from "@/data/projects";
+import { projects, orderedProjects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import LandingSection from "@/components/LandingSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -7,13 +7,6 @@ export const metadata = {
   title: "Projects",
   description: "Explore personal projects built with modern web technologies.",
 };
-
-/** Featured first, in the order the data ranks them; the rest keep their data order. */
-const orderedProjects = [...projects].sort(
-  (a, b) =>
-    (a.featured ?? Number.MAX_SAFE_INTEGER) -
-    (b.featured ?? Number.MAX_SAFE_INTEGER)
-);
 
 export default function ProjectsPage() {
   return (
